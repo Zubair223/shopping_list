@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>hello world!</div>
+    <script>
+      debugger;
+      let p = document.createElement("p");
+
+      p.innerHTML = "this is the p tag";
+
+      let div = document.querySelector("div");
+
+      function insertAfter(p_tag, div_tag) {
+        // div_tag.append(p_tag);
+
+        //div_tag.parentElement.insertBefore(p_tag, div_tag);//
+
+        //parentElement is used with insertBefore there is no insertAfter
+        //so we used next sibling element in next step this is only insert before 
+        div_tag.parentElement.insertBefore(p_tag, div_tag.nextSibling);//
+//first hello world 
+//then this is p tag
+    }
+      insertAfter(p, div);
+    </script>
+  </body>
+</html>

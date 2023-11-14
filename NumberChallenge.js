@@ -1,0 +1,15 @@
+let x = Math.ceil(Math.random() * 100);
+let y = Math.ceil(Math.random() * 50);
+console.log(x);
+console.log(y);
+let getnum;
+getnum = x + y;
+console.log(`${x} + ${y} + =  ${getnum}`);
+getnum = x - y;
+console.log(`${x} - ${y} + =  ${getnum}`);
+getnum = x * y;
+console.log(`${x} * ${y} + =  ${getnum}`);
+getnum = x / y;
+console.log(`${x} / ${y} + =  ${getnum}`);
+getnum = x % y;
+console.log(`${x} % ${y} + =  ${getnum}`);

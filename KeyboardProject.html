@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        margin: 20% 40%;
+        width: 33%;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="abc" />
+    <span id="a"
+      ><h5>e.key</h5>
+      <input type="text" />
+    </span>
+    <span id="b"
+      ><h5>e.keycode</h5>
+      <input type="text" />
+    </span>
+    <span id="c"
+      ><h5>e.codeh5</h5>
+      <input type="text" />
+    </span>
+    <script>
+      let z = document.querySelector("#abc");
+      let a = document.querySelectorAll("input[type=text]");
+      // keypress,
+      z.addEventListener("keyup", function (e) {
+        debugger;
+        console.log(e.key);
+        a[1].value  = e.target.value;
+        // outlineStyle = e.target.style
+        e.stopPropagation(); // prevents bubbling
+      });
+    </script>
+  </body>
+</html>

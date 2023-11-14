@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is the h1 tag</h1>
+    <h2>This is the h2 tag</h2>
+    <h3>This is the h3 tag</h3>
+    <h4>This is the h4 tag</h4>
+    <h5>This is the h5 tag</h5>
+    <h6>This is the h6 tag</h6>
+    <script>
+      //insert adjacentElement
+      //insert adjacentText
+      //insert adjacentHtml
+      //insert Before   but used with the parentElment
+      //insert After is not there but we used the above method and then use the nextSibling method
+      ///using first method
+      let first = document.querySelector("h1");
+      let customElement = document.createElement("p");
+      customElement.innerHTML = "this is the custom p element";
+
+      //(li:nth-child(3))  IMPORTANT
+
+      //first.insertAdjacentElement("beforebegin", customElement);
+      //same as above needs parentElement
+      first.parentElement.insertBefore(customElement, first);
+                                    //(newElmement,previousElement)
+      //   first.parentElement.insertBefore(customElement, first.nextSibling);  it is used for insertAfter because no method fo it
+
+      //by this element is put before the first element begin
+
+      //first.insertAdjacentText("afterbegin", " customText");
+      first.insertAdjacentHTML(
+        "afterend",
+        "<p>this is insert adjacent html</p>"
+      );
+
+      //it came inside the first element and on beginning
+      //but using beforeBegin it wil be outside the first element
+      //same is the the beforeend like first element(afterbegin inside)
+      //and afterend like the beforebegin
+
+      ///Conclusion
+      /*is that beforebegin and afterend is outside the element while as the afterbegin and beforeend is inside the element*/
+    </script>
+  </body>
+</html>
